@@ -1,0 +1,149 @@
+html, body {
+	color: #747476 !important;
+	font-family: Helvetica, Arial, sans-serif !important;
+	background-color: white;
+  margin: 0px;
+}
+
+p{
+  font-size: 12px;
+  margin: 5px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.blue{
+  color: #570069;
+}
+
+.red{
+  color: #E81F2A;
+}
+
+.top-bottom-padding{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.left-right-padding{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.small-font{
+  font-size: 10px;
+}
+
+#main {
+	height: auto;
+  margin-top: 64px;
+}
+
+#main-toolbar{
+  height: 84px;
+  top: 0;
+  background-color: #F1F3F2;
+  width: 100%;
+}
+
+#toolbar-titles{
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 480px) {
+    #toolbar-titles {
+      font-size: 18px;
+    }
+}
+
+#logo{
+  height: auto;
+	max-height: 60px;
+  max-width: 150px;
+  width: 100%;
+}
+
+#footer{
+  a{
+    color: #BABABA;
+    text-decoration: none;
+  }
+  background-color: #545253;
+  color: #BABABA;
+  min-height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    #footer {
+        a{
+          p{
+            font-size: 8px;
+          }
+          font-size: 8px;
+        }
+        span{
+          font-size: 8px;
+        }
+    }
+}
+
+#status-bar{
+  height: 30px;
+  width: 100%;
+  color: white;
+  margin-bottom: 15px;
+}
+
+#status{
+  height: 30px;
+}
+
+#property, #buyer, #negotiate{
+  height: auto;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin-bottom: 25px;
+}
+
+#offer, #response{
+  min-height: 190px;
+  height: auto;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin-bottom: 25px;
+}
+
+#property-img{
+  background-color: grey;
+  height: auto;
+  min-width: 50px;
+  width: 100%;
+}
+
+.pb-button{
+  border-radius: 5px;
+  padding: 0;
+  border-style: none;
+  color: white;
+  background-color: #AAAAAA;
+}
+
+#negotiate-button, #add-button{
+  background-color: #9D01A2;
+}
+
+#submit{
+  background-color: #01AEF0;
+}
+
+#comments{
+  margin: 5px;
+}

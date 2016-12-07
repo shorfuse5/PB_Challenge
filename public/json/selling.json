@@ -1,0 +1,40 @@
+{
+  "name": "Mr David Shepherd",
+  "expert": "Robert White",
+  "buying_pos": {
+    "sell": "Property to sell",
+    "WOM": "20"
+  },
+  "financial_pos": "approved",
+  "timescale": {
+    "weeks_to_move": 10,
+    "chain": "no chain"
+  },
+  "house": {
+    "address": {
+      "line_1": "Eddington House",
+      "line_2": "16 Wiggington Road",
+      "city": "Tamworth",
+      "postcode": "B79 8PB"
+    },
+    "img_url": "https://s23.postimg.org/iypi1olh7/House.jpg"
+  },
+  "asking_price": 189950,
+  "recent_offer": {
+    "offer": 179000,
+    "date": "24/10/2013",
+    "time": "20:17",
+    "comments": {
+      "comment_1": "Hey, hope this is acceptable",
+      "comment_2": "Forgot to say something"
+    }
+  },
+  "response": {
+    "acceptance": "withdrawn",
+    "date": "24/10/2013",
+    "time": "21:05",
+    "comments":{
+      "comment_1": "Nope! Need at least £180000"
+    }
+  }
+}

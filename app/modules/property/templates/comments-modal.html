@@ -1,0 +1,19 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 style="color: white;">Offer Comments</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="comments.cancel()" aria-label="close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-content>
+      <div ng-repeat="comment in comments.comments track by $index">
+        <h3 id="comments">Comment {{$index + 1}}: {{comment}}</h3>
+      </div>
+    </md-content>
+  </form>
+</md-dialog>

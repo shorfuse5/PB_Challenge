@@ -1,0 +1,163 @@
+<div layout="row">
+  <div flex></div>
+  <div flex-gt-sm="50" flex="95">
+    <div id="status-bar" ng-style="pb.status_bar" layout="row">
+      <div flex></div>
+      <div flex="90">
+        <div id="status" layout="row" layout-align="start center">
+          <h4>Status: </h4><span>{{pb.data.response.acceptance}}</span>
+        </div>
+      </div>
+      <div flex></div>
+    </div>
+
+    <div id="property" layout="row">
+      <div flex></div>
+      <div flex="90">
+        <div layout="row" layout-align="start center">
+          <h1 class="blue top-bottom-padding">The Property</h1>
+        </div>
+        <md-divider inset></md-divider>
+        <div class="top-bottom-padding" layout="row">
+          <div layout="column" flex="15" layout-align="start center">
+            <img ng-src="{{pb.data.house.img_url}}" alt="" id="property-img" />
+          </div>
+          <div layout="column" class="blue" flex="55" layout-align="start start">
+            <h4>{{pb.data.house.address.line_1}}, {{pb.data.house.address.line_2}},<br>{{pb.data.house.address.city}}, {{pb.data.house.address.postcode}}</h4>
+          </div>
+          <div layout="column" flex="30" layout-align="center end">
+            <div>
+              <p>Asking Price:</p>
+            </div>
+            <div>
+              <h3 class="blue">£{{pb.data.asking_price}}</h3>
+            </div>
+            <div>
+              <button class="pb-button"><p>VIEW EXTRAS INCLUDED</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div flex></div>
+    </div>
+
+    <div id="buyer" layout="row">
+      <div flex></div>
+      <div flex="90">
+        <div class="top-bottom-padding" layout="row" layout-align="space-between center">
+          <h1 class="blue">Buyers Details</h1>
+          <a data-toggle="collapse" href="#collapse">Hide</a>
+        </div>
+        <div id="collapse" class="panel-collapse collapse in">
+          <md-divider inset></md-divider>
+          <div class="top-bottom-padding" layout="row">
+            <div layout="column" layout-align="center start">
+              <div>
+                <p class="blue">Name:</p>
+              </div>
+              <div>
+                <p class="blue">Buying Position:</p>
+              </div>
+              <div>
+                <p class="blue">Financial Position:</p>
+              </div>
+              <div>
+                <p class="blue">Timescale:</p>
+              </div>
+            </div>
+            <div layout="column" layout-align="center start">
+              <div>
+                <p>{{pb.data.name}}</p>
+              </div>
+              <div>
+                <p>{{pb.data.buying_pos.sell}}<span> - </span>{{pb.data.buying_pos.WOM}} weeks on the market</p>
+              </div>
+              <div>
+                <p>Mortgage required - {{pb.data.financial_pos}}</p>
+              </div>
+              <div>
+                <p>Would like to move in {{pb.data.timescale.weeks_to_move}} weeks - {{pb.data.timescale.chain}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div flex></div>
+    </div>
+
+    <div layout="row" layout-xs="column" layout-align="space-between center">
+      <div id="offer" flex>
+        <div layout="row">
+          <div flex></div>
+          <div flex="80">
+            <div class="top-bottom-padding" layout="row" layout-align="start center">
+              <h1 class="blue">Buyers Offer</h1>
+            </div>
+            <md-divider inset></md-divider>
+            <div class="top-bottom-padding">
+              <h2 class="blue">£{{pb.data.recent_offer.offer}}</h2>
+              <p>Subject to offer qualification by Purplebricks</p>
+              <div class="top-bottom-padding" layout="row" layout-align="space-between center">
+                <button class="pb-button" ng-click="pb.offer_comments()"><p class="small-font">VIEW COMMENTS</p></button>
+                <p class="small-font">Date: {{pb.data.recent_offer.date}}</p>
+                <p class="small-font">Time: {{pb.data.recent_offer.time}}</p>
+              </div>
+            </div>
+          </div>
+          <div flex></div>
+        </div>
+      </div>
+      <span flex-gt-xs="5"></span>
+      <div ng-style="pb.response_style" id="response" flex>
+        <div layout="row">
+          <div flex></div>
+          <div flex="80">
+            <div class="top-bottom-padding" layout="row" layout-align="start center">
+              <h1 class="red">Your Response</h1>
+            </div>
+            <md-divider inset></md-divider>
+            <div class="top-bottom-padding">
+              <h3 class="red">{{pb.response}}</h3>
+              <div class="top-bottom-padding" layout="row" layout-align="space-between center">
+                <button class="pb-button" ng-click="pb.response_comments()"><p class="small-font">VIEW COMMENTS</p></button>
+                <p class="small-font">Date: {{pb.data.response.date}}</p>
+                <p class="small-font">Time: {{pb.data.response.time}}</p>
+              </div>
+            </div>
+          </div>
+          <div flex></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="buyer" layout="row">
+      <div flex></div>
+      <div flex="90">
+        <div class="top-bottom-padding" layout="row" layout-align="space-between center">
+          <h1 class="blue">Re-open negotiations</h1>
+        </div>
+        <md-divider inset></md-divider>
+        <div layout="row">
+          <div class="top-bottom-padding left-right-padding" id="negotiate" layout="row" layout-align="space-between center">
+            <h4 flex="55">Would you like your Expert, {{pb.data.expert}}, to negotiate on your behalf? It's completely free!</h4>
+            <button class="pb-button left" id="negotiate-button" ng-click="pb.negotiation($event)"><p>NEGOTIATE FOR ME</p></button>
+          </div>
+        </div>
+          <div layout="row">
+            <h3 class="blue left-right-padding">Enter an offer you would be willng to accept:</h3>
+          </div>
+          <div class="top-bottom-padding" layout="row">
+            <h1>£</h1><input />
+            <span flex></span>
+            <button class="pb-button" id="submit"><p>SUBMIT OFFER</p></button>
+          </div>
+          <div class="top-bottom-padding left-right-padding" layout="row">
+            <button class="pb-button" id="add-button"><p>ADD COMMENT</p></button>
+          </div>
+      </div>
+      <div flex></div>
+    </div>
+
+  </div>
+  <div flex></div>
+</div>
